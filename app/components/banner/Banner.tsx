@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import Button from "../Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBagShopping } from "@fortawesome/free-solid-svg-icons/faBagShopping";
 
