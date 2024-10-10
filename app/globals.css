@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--background: #ffffff;
+	--foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background: #0a0a0a;
+		--foreground: #ededed;
+	}
+}
+
+body {
+	color: var(--foreground);
+	background: var(--background);
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+	.text-balance {
+		text-wrap: balance;
+	}
+}
+
+body {
+}
+
+.container {
+	@apply m-auto w-full max-w-[1440px] px-5 md:px-8 xl:px-10;
+}
+
+section .section-title {
+	@apply w-full text-center font-Roboto font-medium capitalize text-3xl lg:text-5xl;
+}
+
+.brand-slider {
+	--swiper-navigation-size: 36px;
+	--swiper-navigation-color: #999;
+	--swiper-navigation-sides-offset: 0;
+}
+
+.product-slider {
+	--swiper-navigation-size: 40px;
+	--swiper-navigation-color: #999;
+	--swiper-navigation-sides-offset: 10px;
+}
+
+.image-wrapper {
+	@apply relative flex overflow-hidden;
+}
+
+.image-wrapper img {
+	@apply transition-transform duration-300;
+}
+
+.image-wrapper .image-title {
+	@apply absolute transition-all duration-300 bottom-[-80px] left-0 w-full text-xl px-4 py-2 bg-white/50 backdrop-blur-md;
+}
+
+.image-wrapper .image-title h4 {
+	@apply text-lg lg:text-xl;
+}
+
+.image-wrapper:hover img {
+	@apply scale-110;
+}
+
+.image-wrapper:hover .image-title {
+	@apply bottom-0;
+}
+
+.alink {
+	@apply relative pb-1;
+}
+
+.alink::after {
+	content: "";
+	@apply absolute left-0 bottom-0 w-0 transition-all duration-300  h-[1px] bg-slate-700;
+}
+
+.alink:hover {
+	/* @apply text-primary; */
+}
+
+.alink:hover::after {
+	@apply w-full;
+}
+
+.footer-social a:hover {
+	@apply opacity-70;
+}
